@@ -9,6 +9,7 @@ public class TDAFilesystemImp_207114979_HernandezHernandez implements TDAFilesys
     private List<String> usuariosRegistrados;
     private String usuarioLogeado;
     private boolean sesionActiva;
+    private String unidadActual;
 
     public TDAFilesystemImp_207114979_HernandezHernandez(String name){
         this.nombre = nombre;
@@ -17,32 +18,29 @@ public class TDAFilesystemImp_207114979_HernandezHernandez implements TDAFilesys
         usuariosRegistrados = new ArrayList<>();
         usuarioLogeado = null;
         sesionActiva = false;
+        unidadActual = null;
     }
-
     @Override
     public void crearSistemaArchivos(String nombre){
     }
-
     @Override
     public void operarSistemaArchivos(){
-
     }
-
     @Override
     public Date getFechaCreacion(){
         return fechaCreacion;
     }
-
     @Override
-    public void agregarUnidad(String letter, String nombre, int capacidad){
-        for(TDADrive_207114979_HernandezHernandez unidad : unidades){
-            if(unidad.getLetter().equalsIgnoreCase(letter)){
+    public void agregarUnidad(String letter, String nombreUnidad, int capacidad){
+        for(TDADrive_207114979_HernandezHernandez unidadExistente : unidades){
+            if(unidadExistente.getLetter().equalsIgnoreCase(letter)){
                 System.out.println("Error al agregar la unidad. La letra de la unidad debe ser única");
                 return;
             }
         }
-        TDADrive_207114979_HernandezHernandez unidad = new TDADriveImp_207114979_HernandezHernandez(letter, nombre, capacidad);
-        System.out.println("Se ha agregado la unidad " + letter + " con nombre " + nombre + " y capacidad " + capacidad + " Gigabytes" );
+        TDADrive_207114979_HernandezHernandez nuevaUnidad = new TDADriveImp_207114979_HernandezHernandez(letter, nombreUnidad, capacidad);
+        unidades.add(nuevaUnidad);
+        System.out.println("Se ha agregado la unidad " + letter + " con nombre " + nombreUnidad + " y capacidad " + capacidad + " Gigabytes" );
     }
     @Override
     public void registroUsuario(String nombreUsuario){
@@ -51,13 +49,6 @@ public class TDAFilesystemImp_207114979_HernandezHernandez implements TDAFilesys
         }
         usuariosRegistrados.add(nombreUsuario);
         System.out.println("Se ha registrado el usuario " + nombreUsuario);
-    }
-
-    public boolean esUsuarioRegistrado(String nombreUsuario){
-        return usuariosRegistrados.contains(nombreUsuario);
-    }
-    public boolean esSesionActiva(String nombreUsuario){
-        return false;
     }
     @Override
     public void iniciarSesion(String nombreUsuario){
@@ -86,6 +77,26 @@ public class TDAFilesystemImp_207114979_HernandezHernandez implements TDAFilesys
         }
         else{
             System.out.println("No hay ningún usuario logeado");
+        }
+    }
+    @Override
+    public void unidadFijada(String letter){
+        if(sesionActiva){
+            boolean existeUnidad = false;
+            for(TDADrive_207114979_HernandezHernandez unidad: unidades){
+                if(unidad.getLetter().equalsIgnoreCase(letter)){
+                    unidadActual = letter;
+                    System.out.println("Se ha fijado la unidad " + letter);
+                    existeUnidad = true;
+                    break;
+                }
+            }
+            if(!existeUnidad) {
+                System.out.println("La unidad " + letter + " no existe en el sistema");
+            }
+        }
+        else{
+            System.out.println("No existe ningún usuario logeado. Para poder fijar una unidad, primero se debe iniciar sesión");
         }
     }
 }

@@ -8,6 +8,7 @@ public interface System_207114979_HernandezHernandez {
     public void registroUsuario(String nombreUsuario);
     public void iniciarSesion(String nombreUsuario);
     public void cerrarSesion();
+    public void unidadFijada(String letter);
 
 
 }

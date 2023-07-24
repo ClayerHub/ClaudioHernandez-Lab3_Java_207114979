@@ -60,6 +60,10 @@ public class Main{
                             sistemaArchivos.cerrarSesion();
                             break;
                         case 5:
+                            System.out.println("Ingrese la letra de la unidad que se realizarán acciones:");
+                            scanner.nextLine();
+                            String letraUnidad = scanner.nextLine();
+                            sistemaArchivos.unidadFijada(letraUnidad);
                             break;
                         case 6:
                             break;
@@ -91,17 +95,11 @@ public class Main{
                             break;
                         case 20:
                             break;
-                        case 21:
-                            break;
-                        case 22:
-                            break;
-                        case 23:
-                            break;
                         default:
                             System.out.println("Opción inválida. Vuelva a intentarlo");
                     }
                 }
-                while (subEleccion!=24);
+                while (subEleccion!=21);
             }
             else if(eleccion == 3 && sistemaArchivos != null){
 
@@ -128,26 +126,22 @@ public class Main{
         System.out.println("2.Registrar un usuario en el sistema");
         System.out.println("3.Iniciar sesión con un usuario existente en el sistema");
         System.out.println("4.Cerrar sesión del usuario");
-        System.out.println("5.Añadir una unidad al sistema");
-        System.out.println("6.Registrar un usuario en el sistema");
-        System.out.println("7.Iniciar sesión con un usuario existente en el sistema");
-        System.out.println("8.Cerrar sesión del usuario");
-        System.out.println("9.Escoger unidad en la que se realizarán operaciones");
-        System.out.println("10.Crear una carpeta");
-        System.out.println("11.Cambiar directorio para realizar operaciones");
-        System.out.println("12.Agrega un archivo");
-        System.out.println("13.Elimina un archivo o carpeta");
-        System.out.println("14.Copia un archivo");
-        System.out.println("15.Mueve un archivo");
-        System.out.println("16.Renombra un archivo");
-        System.out.println("17.Lista contenido de un directorio o ruta");
-        System.out.println("18.Formatea una unidad");
-        System.out.println("19.Encripta un archivo o carpeta");
-        System.out.println("20.Desencripta un archivo o carpeta");
-        System.out.println("21.Buscar dentro de un archivo o de una ruta");
-        System.out.println("22.Mostrar contenido de la papelera de reciclaje");
-        System.out.println("23.Restaurar una carpeta o archivo de la papelera de reciclaje");
-        System.out.println("24.Volver al menú principal");
+        System.out.println("5.Escoger unidad en la que se realizarán operaciones");
+        System.out.println("6.Crear una carpeta");
+        System.out.println("7.Cambiar directorio para realizar operaciones");
+        System.out.println("8.Agrega un archivo");
+        System.out.println("9.Elimina un archivo o carpeta");
+        System.out.println("10.Copia un archivo");
+        System.out.println("11.Mueve un archivo");
+        System.out.println("12.Renombra un archivo");
+        System.out.println("13.Lista contenido de un directorio o ruta");
+        System.out.println("14.Formatea una unidad");
+        System.out.println("15.Encripta un archivo o carpeta");
+        System.out.println("16.Desencripta un archivo o carpeta");
+        System.out.println("17.Buscar dentro de un archivo o de una ruta");
+        System.out.println("18.Mostrar contenido de la papelera de reciclaje");
+        System.out.println("19.Restaurar una carpeta o archivo de la papelera de reciclaje");
+        System.out.println("20.Volver al menú principal");
         System.out.println("---------------------------");
     }
 

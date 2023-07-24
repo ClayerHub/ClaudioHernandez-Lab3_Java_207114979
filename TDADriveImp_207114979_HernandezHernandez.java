@@ -1,11 +1,11 @@
 public class TDADriveImp_207114979_HernandezHernandez implements TDADrive_207114979_HernandezHernandez {
     private String letter;
-    private String nombre;
+    private String nombreUnidad;
     private int capacidad;
 
-    public TDADriveImp_207114979_HernandezHernandez(String letter, String nombre, int capacidad){
+    public TDADriveImp_207114979_HernandezHernandez(String letter, String nombreUnidad, int capacidad){
         this.letter = letter;
-        this.nombre = nombre;
+        this.nombreUnidad = nombreUnidad;
         this.capacidad = capacidad;
     }
 
@@ -14,13 +14,11 @@ public class TDADriveImp_207114979_HernandezHernandez implements TDADrive_207114
         return letter;
     }
     @Override
-    public String getNombre(){
-        return nombre;
+    public String getNombreUnidad(){
+        return nombreUnidad;
     }
     @Override
     public int getCapacidad(){
         return capacidad;
     }
-
-
 }

@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.Date;
 
+//Clase Main
 public class Main{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -13,6 +14,7 @@ public class Main{
         do {
             mostrarMenu();
             eleccion = scanner.nextInt();
+            //Iteracion dependiendo de la opcion que escoja el usuario
             if(eleccion == 1 && sistemaArchivos != null){
                 System.out.println("Ya existe un sistema creado");
             }
@@ -33,6 +35,7 @@ public class Main{
                 do {
                     mostrarSubMenu();
                     subEleccion = scanner.nextInt();
+                    //Iteracion dependiendo de la opcion que escoja el usuario
                     switch(subEleccion){
                         case 1:
                             System.out.println("Ingrese la letra de la unidad, esta debe ser única:");
@@ -66,32 +69,49 @@ public class Main{
                             sistemaArchivos.unidadFijada(letraUnidad);
                             break;
                         case 6:
+                            System.out.println("Ingrese el nombre de la carpeta");
+                            scanner.nextLine();
+                            String nombreCarpeta = scanner.nextLine();
+                            sistemaArchivos.hacerDirectorio(nombreCarpeta);
                             break;
                         case 7:
+                            System.out.println("Función no realizada");
                             break;
                         case 8:
+                            System.out.println("Función no realizada");
                             break;
                         case 9:
+                            System.out.println("Función no realizada");
                             break;
                         case 10:
+                            System.out.println("Función no realizada");
                             break;
                         case 11:
+                            System.out.println("Función no realizada");
                             break;
                         case 12:
+                            System.out.println("Función no realizada");
                             break;
                         case 13:
+                            System.out.println("Función no realizada");
                             break;
                         case 14:
+                            System.out.println("Función no realizada");
                             break;
                         case 15:
+                            System.out.println("Función no realizada");
                             break;
                         case 16:
+                            System.out.println("Función no realizada");
                             break;
                         case 17:
+                            System.out.println("Función no realizada");
                             break;
                         case 18:
+                            System.out.println("Función no realizada");
                             break;
                         case 19:
+                            System.out.println("Función no realizada");
                             break;
                         case 20:
                             break;
@@ -99,9 +119,14 @@ public class Main{
                             System.out.println("Opción inválida. Vuelva a intentarlo");
                     }
                 }
-                while (subEleccion!=21);
+                while (subEleccion!=20);
             }
             else if(eleccion == 3 && sistemaArchivos != null){
+                System.out.println("-------------------------");
+                System.out.println("    Datos del sistema");
+                System.out.println("Nombre del sistema: " + nombreSistema);
+                sistemaArchivos.verSistemaCompleto();
+
 
             }
             opcionEscogida(eleccion);
@@ -109,6 +134,7 @@ public class Main{
         while (eleccion != 4);
         scanner.close();
     }
+    //Imprimir el menu por pantalla
     public static void mostrarMenu(){
         System.out.println("--------------------------");
         System.out.println("*****Menú Interactivo*****");
@@ -119,6 +145,7 @@ public class Main{
         System.out.println("4.Cerrar el programa");
         System.out.println("--------------------------");
     }
+    //Imprimir el submenu por pantalla
     public static void mostrarSubMenu(){
         System.out.println("---------------------------");
         System.out.println("Escoja una de las opciones:\n");
@@ -145,6 +172,7 @@ public class Main{
         System.out.println("---------------------------");
     }
 
+    //Permite que el primer menu tenga opciones
     public static void opcionEscogida(int eleccion){
         switch(eleccion){
             case 1:

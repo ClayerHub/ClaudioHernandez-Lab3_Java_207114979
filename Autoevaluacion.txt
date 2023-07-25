@@ -1,0 +1,38 @@
+Requerimientos No Funcionales:
+1. Autoevaluacion:1
+2. Lenguaje:1
+3. Version JDK 11 y Compilador manual:1
+4. Interacciones con el programa:1
+5. Uso del paradigma: 0.75
+6. Prerrequisitos: 0.75
+7. Documentacion:0.5
+8. Organización del código:0.5
+9. Diagrama de análisis:0
+10. Diagrama de diseño:1
+11. Uso de git:0.5
+
+Requerimientos Funcionales:
+1. Clases y estructuras que forman el programa: :1
+2. Menú interactivo por terminal: :1
+3. system:1
+4. systemAddDrive:1
+5. systemRegister:1
+6. systemLogin:1
+7. systemLogout:1
+8. systemSwitchDrive:1
+9. systemMkdir:1
+10. systemCd:0
+11. systemAddFile:0
+12. systemDel:0
+13. systemCopy:0
+14. systemMove:0
+15. systemRen:1
+16. systemDir:0
+17. systemFormat:0
+18. systemEncrypt:0
+19. systemDecrypt:0
+20. systemGrep:0
+21. systemViewTrash:0
+22. systemRestore:0
+
+Nota Estimada: 4.0

@@ -1,0 +1,13 @@
+El funcionamiento del compilador tiene las siguientes direcciones
+Ruta del JDK
+C:\Program Files\Eclipse Adoptium\jdk-11.0.20.8-hotspot
+
+Ruta donde estan los archivos .java
+C:\Users\Claudio\Desktop\Java\Codigo_Fuente_207114979_Hernandez_Hernandez
+
+Ruta donde se guardan los archivos .class
+C:\Users\Claudio\Desktop\Java\Codigo_Fuente_207114979_Hernandez_Hernandez
+
+Si el compilador falla, es posible que alguno de estos elementos sea diferente al de mi computadora, por lo que
+sugiero cambiar uno de ellos editando el compilador
+

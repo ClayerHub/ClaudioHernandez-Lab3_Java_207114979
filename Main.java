@@ -75,43 +75,85 @@ public class Main{
                             sistemaArchivos.hacerDirectorio(nombreCarpeta);
                             break;
                         case 7:
-                            System.out.println("Función no realizada");
+                            System.out.println("Ingrese el directorio para realizar acciones");
+                            scanner.nextLine();
+                            String directorio = scanner.nextLine();
                             break;
                         case 8:
-                            System.out.println("Función no realizada");
+                            System.out.println("Ingrese el nombre del archivo");
+                            scanner.nextLine();
+                            String archivo = scanner.nextLine();
+                            System.out.println("Ingrese el formato del archivo");
+                            String formato = scanner.nextLine();
+                            System.out.println("Ingrese el contenido del archivo");
+                            String contenido = scanner.nextLine();
                             break;
                         case 9:
-                            System.out.println("Función no realizada");
+                            System.out.println("Ingrese el nombre del archivo o carpeta a eliminar");
+                            scanner.nextLine();
+                            String deletear = scanner.nextLine();
                             break;
                         case 10:
-                            System.out.println("Función no realizada");
+                            System.out.println("Ingrese el nombre del archivo o carpeta que desea copiar");
+                            scanner.nextLine();
+                            String copiado = scanner.nextLine();
+                            System.out.println("Ingrese el directorio donde desee almacenar el archivo o carpeta");
+                            String nuevoDirectorio = scanner.nextLine();
                             break;
                         case 11:
-                            System.out.println("Función no realizada");
+                            System.out.println("Ingrese el nombre del archivo o carpeta que desea mover");
+                            scanner.nextLine();
+                            String movido = scanner.nextLine();
+                            System.out.println("Ingrese el directorio donde desee almacenar el archivo o carpeta");
+                            String nuevoDirectorioMovido = scanner.nextLine();
                             break;
                         case 12:
-                            System.out.println("Función no realizada");
+                            System.out.println("Ingrese el nombre del archivo o carpeta que desea renombrar");
+                            scanner.nextLine();
+                            String renombrar = scanner.nextLine();
+                            System.out.println("Ingrese su nuevo nombre");
+                            String renombrado = scanner.nextLine();
                             break;
                         case 13:
-                            System.out.println("Función no realizada");
+                            System.out.println("Ingrese el contenido que desee listar");
+                            scanner.nextLine();
+                            String listado = scanner.nextLine();
                             break;
                         case 14:
-                            System.out.println("Función no realizada");
+                            System.out.println("Ingrese la letra del disco que desea formatear");
+                            scanner.nextLine();
+                            String formateo = scanner.nextLine();
+                            System.out.println("Ingrese su nuevo nombre");
+                            String nombreFormateo = scanner.nextLine();
                             break;
                         case 15:
-                            System.out.println("Función no realizada");
+                            System.out.println("Ingrese la clave para desencriptar el archivo o carpeta");
+                            scanner.nextLine();
+                            String encriptado = scanner.nextLine();
+                            System.out.println("Ingrese el nombre del archivo o carpeta que desea encriptar");
+                            String nombreEncriptado = scanner.nextLine();
                             break;
                         case 16:
-                            System.out.println("Función no realizada");
+                            System.out.println("Ingrese la clave para desencriptar el archivo o carpeta");
+                            scanner.nextLine();
+                            String desencriptado = scanner.nextLine();
+                            System.out.println("Ingrese el nombre del archivo o carpeta que desea desencriptar");
+                            String nombreDesencriptado = scanner.nextLine();
                             break;
                         case 17:
-                            System.out.println("Función no realizada");
+                            System.out.println("Ingrese el contenido a buscar");
+                            scanner.nextLine();
+                            String buscar = scanner.nextLine();
+                            System.out.println("Ingrese el archivo o carpeta en la que deseas buscar");
+                            String nombreBuscar = scanner.nextLine();
                             break;
                         case 18:
-                            System.out.println("Función no realizada");
+                            System.out.println("Este es el contenido de la papelera");
                             break;
                         case 19:
-                            System.out.println("Función no realizada");
+                            System.out.println("Ingrese el nombre de la carpeta o archivo que se desea recuperar");
+                            scanner.nextLine();
+                            String restaurar = scanner.nextLine();
                             break;
                         case 20:
                             break;
